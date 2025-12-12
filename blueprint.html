@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soulsync Blueprint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white">
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md z-50 shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Soulsync</h1>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="index.html" class="hover:text-orange-400">Home</a>
+        <a href="#" class="text-orange-400">Blueprint</a>
+        <a href="contact.html" class="hover:text-orange-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN BLUEPRINT SECTION -->
+  <section class="pt-32 pb-20 max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-orange-400">Get the Soulsync Blueprint</h2>
+<p class="mt-4 text-slate-300 text-lg max-w-2xl mx-auto">
+      Download your free guide to Alignment, Momentum, and Digital Freedom.
+    </p>
+
+    <!-- EMAIL CAPTURE FORM -->
+    <div class="mt-10 bg-slate-800 p-8 rounded-2xl shadow-lg max-w-lg mx-auto">
+      <form id="blueprint-form" class="space-y-4">
+        <input id="email" type="email" required placeholder="Enter your email"
+          class="w-full p-3 rounded-lg bg-slate-700 text-white focus:ring-2 focus:ring-orange-400 outline-none" />
+
+        <button type="submit"
+          class="w-full bg-gradient-to-r from-orange-500 to-orange-400 py-3 rounded-lg font-semibold hover:scale-105 transition">
+          Download Blueprint
+        </button>
+      </form>
+
+      <p id="success-message" class="hidden mt-4 text-green-400 font-medium">✔ Check your email for the download link.</p>
+    </div>
+  </section>
+
+  <!-- OPTIONAL TESTIMONIAL SECTION -->
+  <section class="py-16 bg-slate-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-orange-400">What Readers Say</h3>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="bg-slate-700 p-6 rounded-xl shadow">
+          <p class="italic text-slate-300">“This blueprint shifted how I organize my life and work.”</p>
+          <p class="text-orange-400 font-semibold mt-2">— A. Mwangi</p>
+        </div>
+
+        <div class="bg-slate-700 p-6 rounded-xl shadow">
+          <p class="italic text-slate-300">“Simple, deep, and practical. Highly recommended.”</p>
+          <p class="text-orange-400 font-semibold mt-2">— J. Kimani</p>
+        </div>
+
+        <div class="bg-slate-700 p-6 rounded-xl shadow">
+          <p class="italic text-slate-300">“Helped me gain clarity and momentum.”</p>
+          <p class="text-orange-400 font-semibold mt-2">— L. Otieno</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 text-center bg-slate-900 border-t border-slate-700">
+    <p class="text-slate-400">© 2025 Soulsync. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Simple email capture interaction
+    document.getElementById("blueprint-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("success-message").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>

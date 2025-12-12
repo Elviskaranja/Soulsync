@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulsync Payment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg w-96">
+        
+        <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+            Soulsync Checkout
+        </h2>
+
+        <form id="paymentForm" class="space-y-4">
+
+            <!-- PRODUCT NAME -->
+            <div>
+                <label class="block font-semibold mb-1">Product Name</label>
+                <input 
+                    type="text"
+                    value="Soulsync Subscription"
+                    readonly
+                    class="w-full p-3 border border-gray-300 rounded-lg bg-gray-100"
+                >
+            </div>
+
+            <!-- AMOUNT -->
+            <div>
+                <label class="block font-semibold mb-1">Amount (KES)</label>
+                <input 
+                    type="number"
+                    value=""
+                    readonly
+                    class="w-full p-3 border border-gray-300 rounded-lg bg-gray-100"
+                >
+            </div>
+
+            <!-- EMAIL -->
+            <div>
+                <label class="block font-semibold mb-1">Email Address</label>
+                <input 
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                    class="w-full p-3 border border-gray-300 rounded-lg"
+                >
+            </div>
+
+            <!-- PHONE -->
+            <div>
+                <label class="block font-semibold mb-1">Phone Number (M-Pesa)</label>
+                <input 
+                    type="text"
+                    placeholder="07XX XXX XXX"
+                    required
+                    class="w-full p-3 border border-gray-300 rounded-lg"
+                >
+            </div>
+
+            <!-- PAYMENT OPTIONS -->
+            <div class="mt-4">
+                <p class="font-semibold mb-2">Select Payment Method:</p>
+
+                <label class="flex items-center space-x-2 mb-2">
+                    <input type="radio" name="method" value="mpesa" checked>
+                    <span>M-Pesa (STK Push)</span>
+                </label>
+
+                <label class="flex items-center space-x-2">
+                    <input type="radio" name="method" value="card">
+                    <span>Card Payment (Flutterwave)</span>
+                </label>
+            </div>
+
+            <!-- PAY BUTTON -->
+            <button 
+                type="submit"
+                class="w-full mt-4 bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-bold transition"
+            >
+                Pay Now
+            </button>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soulsync Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white">
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md z-50 shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+       <img src="IMG-20251128-WA0000.jpg" alt="Company's logo" height="200" width="250"> <br>
+      <h1 class="text-xl font-bold">Soulsync</h1>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="index.html" class="hover:text-orange-400">Home</a>
+        <a href="blueprint.html" class="hover:text-orange-400">Blueprint</a>
+        <a href="#" class="text-orange-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="pt-32 pb-20 max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-orange-400 text-center">Contact Us</h2>
+    <p class="mt-4 text-slate-300 text-center max-w-2xl mx-auto">
+      We’d love to hear from you. Send us a message or reach out on WhatsApp.
+    </p>
+
+    <div class="mt-10 bg-slate-800 p-8 rounded-2xl shadow-lg">
+      <form id="contact-form" class="space-y-4">
+        <input type="text" required placeholder="Your Name"
+          class="w-full p-3 rounded-lg bg-slate-700 text-white focus:ring-2 focus:ring-orange-400 outline-none" />
+
+        <input type="email" required placeholder="Your Email"
+          class="w-full p-3 rounded-lg bg-slate-700 text-white focus:ring-2 focus:ring-orange-400 outline-none" />
+
+        <textarea required placeholder="Your Message" rows="5"
+          class="w-full p-3 rounded-lg bg-slate-700 text-white focus:ring-2 focus:ring-orange-400 outline-none"></textarea>
+
+        <button type="submit"
+          class="w-full bg-gradient-to-r from-orange-500 to-orange-400 py-3 rounded-lg font-semibold hover:scale-105 transition">
+          Send Message
+        </button>
+      </form>
+
+      <p id="contact-success" class="hidden mt-4 text-green-400 font-medium text-center">✔ Message sent successfully.</p>
+
+      <div class="mt-8 text-center">
+        <a href="https://wa.me/254116490097"
+          class="inline-block bg-green-500 py-3 px-6 rounded-lg font-semibold hover:scale-105 transition">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 text-center bg-slate-900 border-t border-slate-700">
+    <p class="text-slate-400">© 2025 Soulsync. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Simple contact form interaction
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("contact-success").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
